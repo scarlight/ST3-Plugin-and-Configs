@@ -1,0 +1,12 @@
+<snippet>
+	<content>
+<![CDATA[
+var cs = jQuery.noConflict();
+
+cs(document).ready(function(){
+	$1
+});
+]]>
+</content>
+	<tabTrigger>csq</tabTrigger>
+</snippet>

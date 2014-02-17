@@ -1,0 +1,14 @@
+<snippet>
+	<content>
+<![CDATA[
+color: #$1;
+text-decoration: none;
+text-indent: $2px;
+text-transform: none;
+text-align: ${3:left}; vertical-align: baseline;
+word-spacing: inherit; letter-spacing: inherit;
+white-space:normal;$4
+]]>
+</content>
+	<tabTrigger>tq</tabTrigger>
+</snippet>

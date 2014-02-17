@@ -1,0 +1,21 @@
+<snippet>
+	<content><![CDATA[<?php if($this->countModules('mod-$1')) : ?>
+
+    <div id="id-mod-$1-wrapper">
+        <div id="id-mod-$1">
+            <jdoc:include type="modules" name="mod-$1" style="xhtml" />
+        </div>
+    </div>
+
+<?php else : ?>
+
+    <div id="id-mod-$2-wrapper">
+        <div id="id-mod-$2">
+            <jdoc:include type="modules" name="mod-$2 [/ component]" style="xhtml" />
+        </div>
+    </div>
+
+<?php endif; ?>]]></content>
+	<tabTrigger>jcc</tabTrigger>
+	<description>Joomla - Container + Condition</description>
+</snippet>

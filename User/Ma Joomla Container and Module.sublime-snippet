@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[<div id="id-mod-$1">
+    <jdoc:include type="modules" name="mod-$1" style="xhtml" />
+</div>]]></content>
+	<tabTrigger>jcm</tabTrigger>
+	<description>Joomla - Container + Module</description>
+</snippet>

@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[<div id="context">
+    <jdoc:include type="component" />
+</div>]]></content>
+	<tabTrigger>jcc</tabTrigger>
+	<description>Joomla - Container + Component</description>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+	<content>
+<![CDATA[
+-webkit-border-radius: $1px;
+	moz-border-radius: $1px;
+		border-radius: $1px;
+]]>
+</content>
+	<tabTrigger>bqr</tabTrigger>
+</snippet>

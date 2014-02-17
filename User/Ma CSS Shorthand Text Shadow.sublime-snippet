@@ -1,0 +1,15 @@
+<snippet>
+	<content>
+<![CDATA[
+-webkit-text-shadow: ${1:[h-shadow]}px ${2:[v-shadow]}px ${3:[blur]}px #${4:[color]}; /* for chrome */
+	   -text-shadow: ${1:[h-shadow]}px ${2:[v-shadow]}px ${3:[blur]}px #${4:[color]}; /* for all browser*/
+ 	   text-shadow: ${1:[h-shadow]}px ${2:[v-shadow]}px ${3:[blur]}px #${4:[color]}; /* same as above*/
+   -moz-text-shadow: ${1:[h-shadow]}px ${2:[v-shadow]}px ${3:[blur]}px #${4:[color]}; /* for firefox */
+     -o-text-shadow: ${1:[h-shadow]}px ${2:[v-shadow]}px ${3:[blur]}px #${4:[color]}; /* for opera */
+    -ms-text-shadow: ${1:[h-shadow]}px ${2:[v-shadow]}px ${3:[blur]}px #${4:[color]}; /* for ie 9+ */
+ -khtml-text-shadow: ${1:[h-shadow]}px ${2:[v-shadow]}px ${3:[blur]}px #${4:[color]}; /* for gecko based browser*/
+$5
+]]>
+</content>
+	<tabTrigger>twq</tabTrigger>
+</snippet>

@@ -1,0 +1,79 @@
+{
+	// Disable completions of HTML attributes
+	// with this option disabled, you can get attribute list completions
+	// inside opening HTML tags.
+	// WARNING: with this option disabled, Tab key expander will not
+	// work inside opening HTML attributes
+	"disable_completions": false,
+
+	// With this option enabled, all Emmet's CSS snippets
+	// will be available in standard auto-complete popup
+	"show_css_completions": true,
+
+	// By default, Emmet overrides Tab key to effectively expand abbreviations.
+	// The downside of this approach is that you can’t expand regular ST2
+	// snippets (like `php`). Since it’s not currently possible to get a list
+	// of ST2 snippets via API, you can provide a list of scopes where Emmet’s
+	// Tab trigger should be disabled when expanding simple abbreviation.
+	// If entered abbreviation (like `php`) wasn’t found in Emmet snippets list
+	// or "known_html_tags" preference, Tab handler will not be triggered.
+	// Leave this setting blank to disable this feature
+	"disabled_single_snippet_for_scopes": "",
+
+
+	// Use old Tab handler to exand abbreviations.
+	// With this option enabled, editor may better handle Tab key
+	// (especially with other plugins that overrides Tab key),
+	// but will spit "slow plugin" message
+	"use_old_tab_handler": true,
+
+
+	// Custom snippets definitions, as per https://github.com/emmetio/emmet/blob/master/snippets.json
+	"snippets": {
+		"filters": "css",
+		"less": {
+			"abbreviations": {
+				"ml-gradient-0":"#gradient > .vertical(${1:@color:#F5F5F5}, ${2:@start:#EEE}, ${3:@stop:#FFF}, ${4:@posStart:0}, ${5:@posEnd:1});$6",
+				"ml-gradient-1":"#gradient > .horizontal(${1:@color:#F5F5F5}, ${2:@start:#EEE}, ${3:@stop:#FFF});$4",
+				"ml-gradient-2":"#gradient > .bw(${1:@color:#F5F5F5}, ${2:@start:0}, ${3:@stop:255});$4",
+				"ml-gradient-3":"#gradient > .radial(${1:@color:#F5F5F5}, ${2:@start:#000}, ${3:@stop:#FFF}, ${4:@shape:circle farthest-corner}, ${5:@position:center});$6",
+				"ml-gradient-4":"#gradient > .none();",
+				"ml-border-0":"#border > .bordered(${1:@top-color:#EEE}, ${2:@right-color:#EEE}, ${3:@bottom-color:#EEE}, ${4:@left-color:#EEE});$5",
+				"ml-border-1":"#border > .rounded(${1:@radius:2px});$2",
+				"ml-border-2":"#border > .radius(${1:@topright:0}, ${2:@bottomright:0}, ${3:@bottomleft:0}, ${4:@topleft:0});$5",
+				"ml-shadow-0":"#shadow > .drop(${1:@x-axis:0}, ${2:@y-axis:1px}, ${3:@blur:2px}, ${4:@alpha:0.1}, ${5:@color:#000});$6",
+				"ml-shadow-1":"#shadow > .inner(${1:@horizontal:0}, ${2:@vertical:1px}, ${3:@blur:2px}, ${4:@alpha: 0.4}, ${5:@color: #000});$6",
+				"ml-shadow-2":"#shadow > .both(${1:@horizontalOut:0}, ${2:@verticalOut:1px}, ${3:@blurOut:2px}, ${4:@alphaOut:0.4}, ${5:@colorOut:#000}, ${6:@horizontalIn:0}, ${7:@verticalIn:1px}, ${8:@blurIn:2px}, ${9:@alphaIn:0.4}, ${10:@colorIn:#000});$11",
+				"ml-shadow-3":"#shadow > .box(${1:@arguments});$2",
+				"ml-shadow-4":"#shadow > .text(${1:@arguments});$2",
+				"ml-shadow-5":"#shadow > .none();",
+				"ml-transform-0":"#transform > .box-sizing (${1:@type:border-box});$2",
+				"ml-transform-1":"#transform > .rotation(${1:@deg:5deg});$2",
+				"ml-transform-2":"#transform > .scale(${1:@ratio:1.5});$2",
+				"ml-transform-3":"#transform > .translate(${1:@x:0}, ${2:@y:0});$3",
+				"ml-transform-4":"#transform > .skew (${1:@deg}, ${2:@deg2});$3",
+				"ml-transform-5":"#transform > .translate3d (${1:@x:0}, ${2:@y:0}, ${3:@z:0});$4",
+				"ml-transform-6":"#transform > .perspective (${1:@value:1000});$2",
+				"ml-transform-7":"#transform > .transform-origin (${1:@x:center}, ${2:@y:center});$3",
+				"ml-transform-8":"#transform > .opacity(${1:@opacity:0.5});$2",
+				"ml-transition-0":"#transition > .all(${1:@duration:0.2s}, ${2:@ease:ease-out});$3",
+				"ml-transition-1":"#transition > .property(${1:@property:width}, ${2:@delay:200ms}, ${3:@ease:ease-out});$4",
+				"ml-transition-2":"#transition > .duration(${1:@duration:0.2s});$2",
+				"ml-content":"#content > .columns(${1:@colwidth:250px}, ${2:@colcount:0}, ${3:@colgap:50px}, ${4:@columnRuleColor:#EEE}, ${5:@columnRuleStyle:solid}, ${6:@columnRuleWidth:1px});$7",
+				"ml-wrap-0":"#wrap > .default(${1:relative,block});$2",
+				"ml-wrap-1":"#wrap > .void();",
+				"ml-wrap-2":"#wrap > .relative(${1:block});$2",
+				"ml-wrap-3":"#wrap > .absolute(${1:block});$2",
+			}
+		}
+	},
+
+	// Emmet preferences
+	// List of all available preferences:
+	// http://docs.emmet.io/customization/preferences/
+	"preferences": {
+		"css.intUnit":"px",
+		"css.valueSeparator":":",
+		"css.propertyEnd":";"
+	}
+}

@@ -1,0 +1,30 @@
+{
+	"git_binary": "C:/Users/VM-ScarLight/AppData/Local/GitHub/PortableGit_015aa71ef18c047ce8509ffb2f9e4bb0e3e73f13/bin/git.exe",
+	"installed_packages":
+	[
+		"Alignment",
+		"All Autocomplete",
+		"Auto Semi-Colon",
+		"AutoFileName",
+		"BracketHighlighter",
+		"Clipboard Manager",
+		"Emmet",
+		"FindKeyConflicts",
+		"Google Spell Check",
+		"GotoLastEdit",
+		"HTML Email Snippets",
+		"INI",
+		"LESS",
+		"LiveStyle",
+		"Open Recent Files",
+		"Open URL",
+		"Origami",
+		"PackageResourceViewer",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"Text Pastry",
+		"Theme - Nil",
+		"Theme - Soda",
+		"WordCount"
+	]
+}

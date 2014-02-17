@@ -1,0 +1,10 @@
+<snippet>
+	<content>
+<![CDATA[
+-webkit-box-shadow: ${1:[h-shadow]}px ${2:[v-shadow]}px ${3:[blur]}px ${4:[spread]}px #${5:[color]} ${6:inset};
+        box-shadow: ${1:[h-shadow]}px ${2:[v-shadow]}px ${3:[blur]}px ${4:[spread]}px #${5:[color]} ${6:inset};
+$7
+]]>
+</content>
+	<tabTrigger>bwq</tabTrigger>
+</snippet>

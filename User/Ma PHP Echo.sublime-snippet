@@ -1,0 +1,8 @@
+<snippet>
+	<content>
+<![CDATA[
+echo "${1:text}"."<br>";
+]]>
+</content>
+	<tabTrigger>eq</tabTrigger>
+</snippet>

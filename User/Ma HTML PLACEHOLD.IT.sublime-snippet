@@ -1,0 +1,8 @@
+<snippet>
+	<content>
+<![CDATA[
+http://placehold.it/${1:width}x${2:height}/${3:background-color}/${4:text-color}&text=${5:text}
+]]>
+</content>
+	<tabTrigger>placeq</tabTrigger>
+</snippet>

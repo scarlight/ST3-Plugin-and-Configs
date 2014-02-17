@@ -1,0 +1,8 @@
+<snippet>
+	<content>
+<![CDATA[
+background : #${2:transparent} url($3) ${1:repeat} 0px 0px scroll;$4
+]]>
+</content>
+	<tabTrigger>bgq</tabTrigger>
+</snippet>

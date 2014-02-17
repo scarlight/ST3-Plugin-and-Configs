@@ -1,0 +1,8 @@
+<snippet>
+	<content>
+<![CDATA[
+font: ${1:oblique} ${2:small-caps} ${3:400} ${4:[font-size]}em/${5:[line-height]} ${6:[font-family]};$7
+]]>
+</content>
+	<tabTrigger>fq</tabTrigger>
+</snippet>

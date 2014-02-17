@@ -1,0 +1,15 @@
+<snippet>
+	<content>
+<![CDATA[
+.${1:[ ]}{
+	position: relative;
+	display: block;
+	width: ${2:auto}px;
+	height: ${3:auto}px;$4
+}
+
+$5
+]]>
+</content>
+	<tabTrigger></tabTrigger>
+</snippet>

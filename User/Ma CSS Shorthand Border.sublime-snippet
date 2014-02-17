@@ -1,0 +1,8 @@
+<snippet>
+	<content>
+<![CDATA[
+border: solid $1px #${2:transparent};$3
+]]>
+</content>
+	<tabTrigger>bq</tabTrigger>
+</snippet>

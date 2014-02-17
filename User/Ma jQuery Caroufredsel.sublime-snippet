@@ -1,0 +1,159 @@
+<snippet>
+	<content>
+<![CDATA[
+cs("#foo").carouFredSel({
+    circular    : true,
+    infinite    : true,
+    responsive  : false,
+    direction   : "left",
+    width       : null,     // automatically calculated
+    height      : null,     // automatically calculated
+    align       : "center",
+    padding     : 0,
+    synchronise : null,
+    cookie      : false,
+    onCreate    : null,
+    items       : {
+        visible         : null,     //  automatically calculated
+        minimum         : null,     //  items.visible
+        start           : 0,
+        width           : null,     //  automatically calculated
+        height          : null,     //  automatically calculated
+        filter          : null
+    },
+    scroll      : {
+        items           : null,     //  items.visible
+        fx              : "scroll",
+        easing          : "swing",
+        duration        : 500,
+        pauseOnHover    : false,
+        queue           : false,
+        event           : "click",
+        conditions      : null,
+        onBefore        : null,
+        onAfter         : null,
+        onEnd           : null
+    },
+    auto        : {
+        play            : true,
+        timeoutDuration : null,     //  5 * auto.duration
+        delay           : 0,
+        items           : null,     //  scroll.items
+        fx              : null,     //  scroll.fx
+        easing          : null,     //  scroll.easing
+        duration        : null,     //  scroll.duration
+        pauseOnHover    : null,     //  scroll.pauseOnHover
+        pauseOnEvent    : false,
+        pauseOnResize   : true,
+        queue           : null,     //  scroll.queue
+        event           : null,     //  scroll.event
+        progress        : {
+            bar             : null,
+            updater         : cs.fn.carouFredSel.progressbarUpdater,
+            interval        : 50
+        },
+        conditions      : null,     //  scroll.conditions
+        onBefore        : null,     //  scroll.onBefore
+        onAfter         : null,     //  scroll.onAfter
+        onEnd           : null,     //  scroll.onEnd
+        onTimeoutStart  : null,
+        onTimeoutEnd    : null,
+        onTimeoutPause  : null
+    },
+    prev        : {
+        button          : null,
+        key             : null,
+        items           : null,     //  scroll.items
+        fx              : null,     //  scroll.fx
+        easing          : null,     //  scroll.easing
+        duration        : null,     //  scroll.duration
+        pauseOnHover    : null,     //  scroll.pauseOnHover
+        queue           : null,     //  scroll.queue
+        event           : null,     //  scroll.event
+        conditions      : null,     //  scroll.conditions
+        onBefore        : null,     //  scroll.onBefore
+        onAfter         : null,     //  scroll.onAfter
+        onEnd           : null      //  scroll.onEnd
+    },
+    next        : {
+        button          : null,
+        key             : null,
+        items           : null,     //  scroll.items
+        fx              : null,     //  scroll.fx
+        easing          : null,     //  scroll.easing
+        duration        : null,     //  scroll.duration
+        pauseOnHover    : null,     //  scroll.pauseOnHover
+        queue           : null,     //  scroll.queue
+        event           : null,     //  scroll.event
+        conditions      : null,     //  scroll.conditions
+        onBefore        : null,     //  scroll.onBefore
+        onAfter         : null,     //  scroll.onAfter
+        onEnd           : null      //  scroll.onEnd
+    },
+    pagination  : {
+        container       : null,
+        keys            : false,
+        anchorBuilder   : null,     //  cs.fn.carouFredSel.pageAnchorBuilder
+        items           : null,     //  items.visible
+        deviation       : 0,
+        fx              : null,     //  scroll.fx
+        easing          : null,     //  scroll.easing
+        duration        : null,     //  scroll.duration
+        pauseOnHover    : null,     //  scroll.pauseOnHover
+        queue           : null,     //  scroll.queue
+        event           : null,     //  scroll.event
+        conditions      : null,     //  scroll.conditions
+        onBefore        : null,     //  scroll.onBefore
+        onAfter         : null,     //  scroll.onAfter
+        onEnd           : null      //  scroll.onEnd
+    },
+    swipe       : {
+        onTouch         : false,
+        onMouse         : false,
+        options         : {},
+        items           : null,     //  scroll.items
+        fx              : null,     //  scroll.fx
+        easing          : null,     //  scroll.easing
+        duration        : null,     //  scroll.duration
+        pauseOnHover    : null,     //  scroll.pauseOnHover
+        queue           : null,     //  scroll.queue
+        conditions      : null,     //  scroll.conditions
+        onBefore        : null,     //  scroll.onBefore
+        onAfter         : null,     //  scroll.onAfter
+        onEnd           : null      //  scroll.onEnd
+    },
+    mousewheel  : {
+        items           : null,     //  scroll.items
+        fx              : null,     //  scroll.fx
+        easing          : null,     //  scroll.easing
+        duration        : null,     //  scroll.duration
+        pauseOnHover    : null,     //  scroll.pauseOnHover
+        queue           : null,     //  scroll.queue
+        conditions      : null,     //  scroll.conditions
+        onBefore        : null,     //  scroll.onBefore
+        onAfter         : null,     //  scroll.onAfter
+        onEnd           : null      //  scroll.onEnd
+    }
+}, {
+    debug       : false,
+    transition  : false,
+    events      : {
+        prefix          : "",
+        namespace       : "cfs"
+    },
+    wrapper     : {
+        element         : "div",
+        classname       : "caroufredsel_wrapper"
+    },
+    classnames  : {
+        selected        : "selected",
+        hidden          : "hidden",
+        disabled        : "disabled",
+        paused          : "paused",
+        stopped         : "stopped"
+    }
+});
+]]>
+</content>
+	<tabTrigger>cfq</tabTrigger>
+</snippet>

@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[<div id="id-breadcrumb">
+    <jdoc:include type="modules" name="breadcrumb" style="xhtml" />
+</div>]]></content>
+	<tabTrigger>jcb</tabTrigger>
+	<description>Joomla - Container + Breadcrumb</description>
+</snippet>

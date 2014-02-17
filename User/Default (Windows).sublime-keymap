@@ -1,0 +1,120 @@
+[
+  { "keys": ["ctrl+k", "ctrl+n"], "command": "toggle_setting", "args": {"setting": "gutter"} },
+  { "keys": ["ctrl+k", "ctrl+i"], "command": "toggle_setting", "args": {"setting": "word_wrap"} },
+  { "keys": ["ctrl+k", "ctrl+m"], "command": "toggle_menu" },
+  { "keys": ["ctrl+k", "ctrl+v"], "command": "toggle_minimap" },
+  { "keys": ["ctrl+\\"], "command": "show_overlay", "args": {"overlay": "goto", "text": "#"} },
+  { "keys": ["ctrl+insert"], "command": "show_overlay", "args": {"overlay": "goto", "text": "@"} },
+  { "keys": ["ctrl+delete"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
+  { "keys": ["f12"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
+  { "keys": ["ctrl+v"], "command": "paste_and_indent" },
+  { "keys": ["ctrl+shift+v"], "command": "paste" },
+  {
+      "keys": ["ctrl+."], "command": "goto_css_declaration",
+      "args": {"goto": "next"}
+  },
+  {
+      "keys": ["ctrl+,"],  "command": "goto_css_declaration",
+      "args": {"goto": "prev"}
+  },
+  {
+    "keys": [
+        "ctrl+1"
+    ],
+    "args": {
+        "action": "match_pair_inward"
+    }, 
+    "command": "run_emmet_action", 
+    "context": [
+        {
+            "key": "emmet_action_enabled.match_pair_inward"
+        }
+    ]
+  },
+  {
+    "keys": [
+        "ctrl+shift+c"
+    ], 
+    "args": {
+        "action": "match_pair_outward"
+    },
+    "command": "run_emmet_action", 
+    "context": [
+        {
+            "key": "emmet_action_enabled.match_pair_outward"
+        }
+    ]
+  },
+  {
+    "keys": [
+        "shift+ctrl+x"
+    ], 
+    "args": {
+        "action": "select_next_item"
+    }, 
+    "command": "run_emmet_action", 
+    "context": [
+        {
+            "key": "emmet_action_enabled.select_next_item"
+        }
+    ]
+  },
+  // Go to left bracket
+  {
+      "keys": ["alt+up"],
+      "command": "bh_key",
+      "args":
+      {
+          "lines" : true,
+          "plugin":
+          {
+              "type": ["__all__"],
+              "command": "bh_modules.bracketselect",
+              "args": {"select": "left"}
+          }
+      }
+  },
+  // Go to right bracket
+  {
+      "keys": ["alt+down"],
+      "command": "bh_key",
+      "args":
+      {
+          "lines" : true,
+          "plugin":
+          {
+              "type": ["__all__"],
+              "command": "bh_modules.bracketselect",
+              "args": {"select": "right"}
+          }
+      }
+  },
+  // Select tag name of HTML/XML tag (both opening name and closing)
+  {
+      "keys": ["ctrl+shift+a", "ctrl+shift+a"],
+      "command": "bh_key",
+      "args":
+      {
+          "plugin":
+          {
+              "type": ["cfml", "html", "angle"],
+              "command": "bh_modules.tagnameselect"
+          }
+      }
+  },
+  // Select text between matching brackets
+  {
+      "keys": ["ctrl+shift+a","ctrl+shift+x"],
+      "command": "bh_key",
+        "args":
+        {
+            "ignore": ["quote"],
+            "lines" : true,
+            "plugin":
+            {
+                "type": ["__all__"],
+                "command": "bh_modules.bracketselect"
+            }
+        }
+  }
+]

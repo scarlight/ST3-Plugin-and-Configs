@@ -1,0 +1,10 @@
+<snippet>
+	<content>
+<![CDATA[
+-webkit-border-bottom-left-radius: $1px;
+	moz-border-radius-bottomleft : $1px;
+		border-bottom-left-radius: $1px;$2
+]]>
+</content>
+	<tabTrigger>bqbl</tabTrigger>
+</snippet>

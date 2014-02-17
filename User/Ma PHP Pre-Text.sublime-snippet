@@ -1,0 +1,11 @@
+<snippet>
+	<content>
+<![CDATA[
+echo "<pre>";
+    print_r(${1:variable});
+echo "</pre>";
+$2
+]]>
+</content>
+	<tabTrigger>pqr</tabTrigger>
+</snippet>

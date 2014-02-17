@@ -1,0 +1,64 @@
+{
+	"afn_insert_dimensions": true,
+	"afn_insert_width_first": true,
+	"afn_valid_scopes":
+	[
+		"string",
+		"html",
+		"css",
+		"sass",
+		"less",
+		"scss"
+	],
+	"auto_complete": true,
+	"auto_complete_commit_on_tab": true,
+	"auto_complete_delay": 2,
+	"auto_complete_triggers":
+	[
+		{
+			"characters": "<",
+			"selector": "text.html"
+		},
+		{
+			"characters": "/",
+			"selector": "string.quoted.double.html,string.quoted.single.html, source.css"
+		}
+	],
+	"auto_complete_with_fields": true,
+	"bold_folder_labels": true,
+	"caret_extra_bottom": 5,
+	"caret_extra_top": 5,
+	"caret_extra_width": 0,
+	"caret_style": "phase",
+	"color_scheme": "Packages/User/Monokai Soda (SL).tmTheme",
+	"detect_slow_plugins": false,
+	"draw_shadows": true,
+	"fade_fold_buttons": false,
+	"font_face": "Consolas",
+	"font_options":
+	[
+		"antialias",
+		"subpixel_antialias"
+	],
+	"font_size": 10,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"line_padding_bottom": 1,
+	"line_padding_top": 1,
+	"overlay_scroll_bars": "enabled",
+	"save_on_focus_lost": true,
+	"scroll_past_end": true,
+	"scroll_speed": 0.8,
+	"show_encoding": true,
+	"show_line_endings": true,
+	"show_tab_close_buttons": false,
+	"soda_classic_tabs": false,
+	"soda_folder_icons": true,
+	"theme": "Soda Dark 3.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true
+}
