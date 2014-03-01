@@ -62,8 +62,8 @@
 				"ml-content":"#content > .columns(${1:@colwidth:250px}, ${2:@colcount:0}, ${3:@colgap:50px}, ${4:@columnRuleColor:#EEE}, ${5:@columnRuleStyle:solid}, ${6:@columnRuleWidth:1px});$7",
 				"ml-wrap-0":"#wrap > .default(${1:relative,block});$2",
 				"ml-wrap-1":"#wrap > .void();",
-				"ml-wrap-2":"#wrap > .relative(${1:block});$2",
-				"ml-wrap-3":"#wrap > .absolute(${1:block});$2",
+				"ml-wrap-2":"#wrap > .vrelative(${1:block});$2",
+				"ml-wrap-3":"#wrap > .vabsolute(${1:block});$2",
 			}
 		}
 	},
