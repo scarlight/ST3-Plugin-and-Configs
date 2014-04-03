@@ -1,0 +1,182 @@
+<snippet>
+	<content>
+<![CDATA[
+----------------------------------------------------------------- html
+
+<div id="COMPANY-nav-wrp">
+    <nav>
+        <ul class="COMPANY-mainmenu" class="sf-menu">
+            <li><a href="#">Home</a></li>
+            <li class="parent">
+                <a href="#">About Us</a>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+</div>
+
+
+----------------------------------------------------------------- js
+
+cs("#COMPANY-nav-wrp .sf-menu").superfish({
+    delay:         600,
+    animation:     {height:'show'},
+    speed:         'fast',
+    cssArrows:     false
+}).supersubs({
+    minWidth        : 10,
+    maxWidth        : 25,
+    extraWidth      : 1
+});
+
+----------------------------------------------------------------- css
+
+#COMPANY-nav-wrp
+{
+    // color setting
+    @highlight-color: #50a5e9;
+    @select-color: #1773bd;
+
+    // same font size
+    @menu-font-size: 14px;
+    @menu-font-weight: 600;
+    @menu-a-height:42px; // not using directly
+    @calculate-line-height: 42/14; // ( @menu-a-height / @menu-font-size )
+
+    // grouped settings
+    .for_nav_container()
+    {
+        #wrap > .vrelative();
+        width: auto;
+        height:auto;
+        line-height:0;
+    }
+    .for_first_ul_container()
+    {
+        #wrap > .vrelative(inline-block);
+        list-style-type:none;
+        list-style-position:outside;
+    }
+    .for_first_ul_li_container()
+    {
+        #wrap > .vrelative(inline-block);
+        float:left;
+    }
+    .for_trailing_hovers_on_li()
+    {
+        background-color: @highlight-color;
+    }
+    .for_first_ul_li_onhover_then_its_a_href()
+    {
+        color: white;
+        //prevent background-color here to have for_trailing_hovers_on_li working
+    }
+    .for_nested_ul()
+    {
+        #wrap > .vabsolute();
+        width:auto;
+        height:auto;
+        background-color: @select-color;
+        z-index:200;
+    }
+    .for_nested_ul_li()
+    {
+        #wrap > .vrelative();
+        width:100%;
+        height:auto;
+    }
+    .for_nested_ul_li_a_href()
+    {
+        #wrap > .vrelative();
+        width: 100%;
+        height:auto;
+        font-size: @menu-font-size;
+        font-weight:@menu-font-weight;
+        text-align:left;
+        color: white;
+        line-height:@calculate-line-height;
+        padding:0 14px;
+        #transition > .all(@duration:150ms, @ease:ease-out);
+        &:hover {
+            color: white;
+            background-color: @highlight-color;
+        }
+    }
+    .for_a_href()
+    {
+        #wrap > .vrelative(inline-block);
+        width: auto;
+        height:auto;
+        font-size: @menu-font-size;
+        font-weight:@menu-font-weight;
+        text-align:left;
+        text-decoration: none;
+        color: white;
+        line-height:@calculate-line-height;
+        padding:0 14px;
+        #transition > .all(@duration:150ms, @ease:ease-out);
+        &:hover {
+            text-decoration: none;
+            color: white;
+            background-color: @select-color;
+        }
+    }
+
+    // -----------------------------------------------------
+
+    #wrap > .vrelative();
+    width:auto; //auto wrap around the child container
+    height:auto;
+    background-color: orange;
+    // add padding, margin or background as you like
+
+    nav
+    {
+        .for_nav_container();
+        ul{
+            .for_first_ul_container();
+            li
+            {
+                .for_first_ul_li_container();
+                a
+                {
+                    .for_a_href();
+                }
+                ul
+                {
+                    .for_nested_ul();
+                    li
+                    {
+                        .for_nested_ul_li();
+                        a
+                        {
+                            .for_nested_ul_li_a_href();
+                        }
+                    }
+                    ul{
+                        top: 0px;
+                    }
+                }
+            }
+        }
+        li.sfHover
+        {
+            .for_trailing_hovers_on_li();
+            a
+            {
+                .for_first_ul_li_onhover_then_its_a_href();
+            }
+        }
+    }
+}
+]]>
+</content>
+	<tabTrigger>msfq</tabTrigger>
+</snippet>
