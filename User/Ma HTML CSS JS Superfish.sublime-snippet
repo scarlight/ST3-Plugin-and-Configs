@@ -5,7 +5,7 @@
 
 <div id="COMPANY-nav-wrp">
     <nav>
-        <ul class="COMPANY-mainmenu" class="sf-menu">
+        <ul class="COMPANY-mainmenu sf-menu">
             <li><a href="#">Home</a></li>
             <li class="parent">
                 <a href="#">About Us</a>
