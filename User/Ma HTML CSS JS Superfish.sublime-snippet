@@ -38,11 +38,14 @@ cs("#COMPANY-nav-wrp .sf-menu").superfish({
 
 ----------------------------------------------------------------- css
 
+//**********************************************************************************************//
+// START MAIN NAVIGATION.
+//**********************************************************************************************//
 #COMPANY-nav-wrp
 {
     // color setting
-    @highlight-color: #50a5e9;
-    @select-color: #1773bd;
+    @main-color: blue;
+    @secondary-color: black;
 
     // same font size
     @menu-font-size: 14px;
@@ -51,50 +54,52 @@ cs("#COMPANY-nav-wrp .sf-menu").superfish({
     @calculate-line-height: 42/14; // ( @menu-a-height / @menu-font-size )
 
     // grouped settings
-    .for_nav_container()
+    .COMPANY_nav()
     {
-        #wrap > .vrelative();
+        &:extend(.reset)
         width: auto;
         height:auto;
         line-height:0;
     }
-    .for_first_ul_container()
+    .COMPANY_ul()
     {
-        #wrap > .vrelative(inline-block);
+        &:extend(.reset);
+        display:inline-block;
         list-style-type:none;
         list-style-position:outside;
     }
-    .for_first_ul_li_container()
+    .COMPANY_ul_li()
     {
-        #wrap > .vrelative(inline-block);
+        &:extend(.reset);
+        display:inline-block;
         float:left;
     }
-    .for_trailing_hovers_on_li()
+    .COMPANY_cascade_hover_on_li()
     {
-        background-color: @highlight-color;
+        background-color: @secondary-color;
     }
-    .for_first_ul_li_onhover_then_its_a_href()
+    .COMPANY_parent_class_li_a()
     {
         color: white;
-        //prevent background-color here to have for_trailing_hovers_on_li working
+        //prevent background-color here to have COMPANY_cascade_hover_on_li working
     }
-    .for_nested_ul()
+    .COMPANY_nested_ul()
     {
         #wrap > .vabsolute();
         width:auto;
         height:auto;
-        background-color: @select-color;
+        background-color: @main-color;
         z-index:200;
     }
-    .for_nested_ul_li()
+    .COMPANY_nested_ul_li()
     {
-        #wrap > .vrelative();
+        &:extend(.reset)
         width:100%;
         height:auto;
     }
-    .for_nested_ul_li_a_href()
+    .COMPANY_nested_ul_li_a()
     {
-        #wrap > .vrelative();
+        &:extend(.reset)
         width: 100%;
         height:auto;
         font-size: @menu-font-size;
@@ -106,12 +111,13 @@ cs("#COMPANY-nav-wrp .sf-menu").superfish({
         #transition > .all(@duration:150ms, @ease:ease-out);
         &:hover {
             color: white;
-            background-color: @highlight-color;
+            background-color: @secondary-color;
         }
     }
-    .for_a_href()
+    .COMPANY_for_a()
     {
-        #wrap > .vrelative(inline-block);
+        &:extend(.reset);
+        display:inline-block;
         width: auto;
         height:auto;
         font-size: @menu-font-size;
@@ -125,13 +131,13 @@ cs("#COMPANY-nav-wrp .sf-menu").superfish({
         &:hover {
             text-decoration: none;
             color: white;
-            background-color: @select-color;
+            background-color: @main-color;
         }
     }
 
     // -----------------------------------------------------
 
-    #wrap > .vrelative();
+    &:extend(.reset)
     width:auto; //auto wrap around the child container
     height:auto;
     background-color: orange;
@@ -139,25 +145,25 @@ cs("#COMPANY-nav-wrp .sf-menu").superfish({
 
     nav
     {
-        .for_nav_container();
+        .COMPANY_nav();
         ul{
-            .for_first_ul_container();
+            .COMPANY_ul();
             li
             {
-                .for_first_ul_li_container();
+                .COMPANY_ul_li();
                 a
                 {
-                    .for_a_href();
+                    .COMPANY_for_a();
                 }
                 ul
                 {
-                    .for_nested_ul();
+                    .COMPANY_nested_ul();
                     li
                     {
-                        .for_nested_ul_li();
+                        .COMPANY_nested_ul_li();
                         a
                         {
-                            .for_nested_ul_li_a_href();
+                            .COMPANY_nested_ul_li_a();
                         }
                     }
                     ul{
@@ -168,10 +174,10 @@ cs("#COMPANY-nav-wrp .sf-menu").superfish({
         }
         li.sfHover
         {
-            .for_trailing_hovers_on_li();
-            a
+            .COMPANY_cascade_hover_on_li();
+            > a
             {
-                .for_first_ul_li_onhover_then_its_a_href();
+                .COMPANY_parent_class_li_a();
             }
         }
     }

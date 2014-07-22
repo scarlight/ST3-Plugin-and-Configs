@@ -1,4 +1,5 @@
 [
+  { "keys": ["c", "m", "d"], "command": "cmd"},
   { "keys": ["ctrl+k", "ctrl+n"], "command": "toggle_setting", "args": {"setting": "gutter"} },
   { "keys": ["ctrl+k", "ctrl+i"], "command": "toggle_setting", "args": {"setting": "word_wrap"} },
   { "keys": ["ctrl+k", "ctrl+m"], "command": "toggle_menu" },
@@ -17,47 +18,91 @@
       "keys": ["ctrl+,"],  "command": "goto_css_declaration",
       "args": {"goto": "prev"}
   },
+  { "keys": ["ctrl+up"], "command": "scroll_lines", "args": {"amount": 1.0 } },
+  { "keys": ["ctrl+down"], "command": "scroll_lines", "args": {"amount": -1.0 } },
   {
-    "keys": [
-        "ctrl+1"
-    ],
-    "args": {
-        "action": "match_pair_inward"
-    }, 
-    "command": "run_emmet_action", 
-    "context": [
-        {
-            "key": "emmet_action_enabled.match_pair_inward"
-        }
-    ]
+      "keys": [
+          "ctrl+shift+alt+up"
+      ],
+      "args": {
+          "action": "increment_number_by_1"
+      },
+      "command": "run_emmet_action",
+      "context": [
+          {
+              "key": "emmet_action_enabled.increment_number_by_1"
+          }
+      ]
   },
   {
-    "keys": [
-        "ctrl+shift+c"
-    ], 
-    "args": {
-        "action": "match_pair_outward"
-    },
-    "command": "run_emmet_action", 
-    "context": [
-        {
-            "key": "emmet_action_enabled.match_pair_outward"
-        }
-    ]
+      "keys": [
+          "ctrl+shift+alt+down"
+      ],
+      "args": {
+          "action": "decrement_number_by_1"
+      },
+      "command": "run_emmet_action",
+      "context": [
+          {
+              "key": "emmet_action_enabled.decrement_number_by_1"
+          }
+      ]
   },
   {
     "keys": [
         "shift+ctrl+x"
-    ], 
+    ],
     "args": {
         "action": "select_next_item"
-    }, 
-    "command": "run_emmet_action", 
+    },
+    "command": "run_emmet_action",
     "context": [
         {
             "key": "emmet_action_enabled.select_next_item"
         }
     ]
+  },
+  {
+      "keys": [
+          "ctrl+shift+alt+c"
+      ],
+      "args": {
+          "action": "balance_inward"
+      },
+      "command": "run_emmet_action",
+      "context": [
+          {
+              "key": "emmet_action_enabled.balance_inward"
+          }
+      ]
+  },
+  {
+      "keys": [
+          "ctrl+shift+c"
+      ],
+      "args": {
+          "action": "balance_outward"
+      },
+      "command": "run_emmet_action",
+      "context": [
+          {
+              "key": "emmet_action_enabled.balance_outward"
+          }
+      ]
+  },
+  {
+      "keys": [
+          "ctrl+shift+'"
+      ],
+      "args": {
+          "action": "encode_decode_data_url"
+      },
+      "command": "run_emmet_action",
+      "context": [
+          {
+              "key": "emmet_action_enabled.encode_decode_data_url"
+          }
+      ]
   },
   // Go to left bracket
   {
@@ -116,5 +161,13 @@
                 "command": "bh_modules.bracketselect"
             }
         }
+  },
+  {
+      "keys": ["ctrl+shift+r"], "command": "browser_refresh", "args": {
+          "auto_save": true,
+          "delay": 0.5,
+          "activate_browser": false,
+          "browser_name" : "all"
+      }
   }
 ]

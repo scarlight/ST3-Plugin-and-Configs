@@ -27,44 +27,65 @@
 	// but will spit "slow plugin" message
 	"use_old_tab_handler": true,
 
+	// A comma-separated list of disabled action names.
+	// Listed action will not be triggered by default keyboard
+	// shortcut.
+	// Use "all" value to disable all shortcuts at once
+	"disabled_keymap_actions": "",
+
 
 	// Custom snippets definitions, as per https://github.com/emmetio/emmet/blob/master/snippets.json
 	"snippets": {
 		"filters": "css",
 		"less": {
 			"abbreviations": {
-				"ml-gradient-0":"#gradient > .vertical(${1:@color:#F5F5F5}, ${2:@start:#EEE}, ${3:@stop:#FFF}, ${4:@posStart:0}, ${5:@posEnd:1});$6",
-				"ml-gradient-1":"#gradient > .horizontal(${1:@color:#F5F5F5}, ${2:@start:#EEE}, ${3:@stop:#FFF});$4",
-				"ml-gradient-2":"#gradient > .bw(${1:@color:#F5F5F5}, ${2:@start:0}, ${3:@stop:255});$4",
-				"ml-gradient-3":"#gradient > .radial(${1:@color:#F5F5F5}, ${2:@start:#000}, ${3:@stop:#FFF}, ${4:@shape:circle farthest-corner}, ${5:@position:center});$6",
-				"ml-gradient-4":"#gradient > .none();",
-				"ml-border-0":"#border > .bordered(${1:@top-color:#EEE}, ${2:@right-color:#EEE}, ${3:@bottom-color:#EEE}, ${4:@left-color:#EEE});$5",
-				"ml-border-1":"#border > .rounded(${1:@radius:2px});$2",
-				"ml-border-2":"#border > .radius(${1:@topright:0}, ${2:@bottomright:0}, ${3:@bottomleft:0}, ${4:@topleft:0});$5",
-				"ml-shadow-0":"#shadow > .drop(${1:@x-axis:0}, ${2:@y-axis:1px}, ${3:@blur:2px}, ${4:@alpha:0.1}, ${5:@color:#000});$6",
-				"ml-shadow-1":"#shadow > .inner(${1:@horizontal:0}, ${2:@vertical:1px}, ${3:@blur:2px}, ${4:@alpha: 0.4}, ${5:@color: #000});$6",
-				"ml-shadow-2":"#shadow > .both(${1:@horizontalOut:0}, ${2:@verticalOut:1px}, ${3:@blurOut:2px}, ${4:@alphaOut:0.4}, ${5:@colorOut:#000}, ${6:@horizontalIn:0}, ${7:@verticalIn:1px}, ${8:@blurIn:2px}, ${9:@alphaIn:0.4}, ${10:@colorIn:#000});$11",
-				"ml-shadow-3":"#shadow > .box(${1:@arguments});$2",
-				"ml-shadow-4":"#shadow > .text(${1:@arguments});$2",
-				"ml-shadow-5":"#shadow > .none();",
-				"ml-transform-0":"#transform > .box-sizing (${1:@type:border-box});$2",
-				"ml-transform-1":"#transform > .rotation(${1:@deg:5deg});$2",
-				"ml-transform-2":"#transform > .scale(${1:@ratio:1.5});$2",
-				"ml-transform-3":"#transform > .translate(${1:@x:0}, ${2:@y:0});$3",
-				"ml-transform-4":"#transform > .skew (${1:@deg}, ${2:@deg2});$3",
-				"ml-transform-5":"#transform > .translate3d (${1:@x:0}, ${2:@y:0}, ${3:@z:0});$4",
-				"ml-transform-6":"#transform > .perspective (${1:@value:1000});$2",
-				"ml-transform-7":"#transform > .transform-origin (${1:@x:center}, ${2:@y:center});$3",
-				"ml-transform-8":"#transform > .opacity(${1:@opacity:0.5});$2",
-				"ml-transition-0":"#transition > .all(${1:@duration:0.2s}, ${2:@ease:ease-out});$3",
-				"ml-transition-1":"#transition > .property(${1:@property:width}, ${2:@delay:200ms}, ${3:@ease:ease-out});$4",
-				"ml-transition-2":"#transition > .duration(${1:@duration:0.2s});$2",
-				"ml-content":"#content > .columns(${1:@colwidth:250px}, ${2:@colcount:0}, ${3:@colgap:50px}, ${4:@columnRuleColor:#EEE}, ${5:@columnRuleStyle:solid}, ${6:@columnRuleWidth:1px});$7",
+				"ml-gradient-0":"#gradient > .vertical(@color: #F5F5F5, @start: #EEE, @stop: #FFF, @posStart: 0, @posEnd: 1)",
+				"ml-gradient-1":"#gradient > .horizontal(@color: #F5F5F5, @start: #EEE, @stop: #FFF)",
+				"ml-gradient-2":"#gradient > .bw(@color: #F5F5F5, @start: 0, @stop: 255)",
+				"ml-gradient-3":"#gradient > .radial(@color: #F5F5F5, @start: #000, @stop: #FFF, @shape: circle farthest-corner, @position: center)",
+				"ml-gradient-4":"#gradient > .none()",
+
+				"ml-border-0":"#border > .bordered(@top-color: #EEE, @right-color: #EEE, @bottom-color: #EEE, @left-color: #EEE)",
+				"ml-border-1":"#border > .rounded(@radius: 2px)",
+				"ml-border-2":"#border > .radius(@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0)",
+
+				"ml-shadow-0":"#shadow > .drop(@x-axis: 0, @y-axis: 1px, @blur: 2px, @alpha: 0.1, @color: #000)",
+				"ml-shadow-1":"#shadow > .inner(@horizontal:0, @vertical:1px, @blur:2px, @alpha: 0.4, @color: #000)",
+				"ml-shadow-2":"#shadow > .both(@horizontalOut:0, @verticalOut:1px, @blurOut:2px, @alphaOut: 0.4, @colorOut: #000,@horizontalIn:0, @verticalIn:1px, @blurIn:2px, @alphaIn: 0.4, @colorIn: #000)",
+				"ml-shadow-3":"#shadow > .box(@arguments)",
+				"ml-shadow-4":"#shadow > .text(@arguments)",
+				"ml-shadow-5":"#shadow > .none()",
+
+				"ml-transform-0":"#transform > .rotation(@deg:5deg)",
+				"ml-transform-1":"#transform > .scaleY(@ratio:1.5)",
+				"ml-transform-2":"#transform > .scaleX(@ratio:1.5)",
+				"ml-transform-3":"#transform > .scale(@ratio:1.5)",
+				"ml-transform-4":"#transform > .translate(@x:0, @y:0)",
+				"ml-transform-5":"#transform > .opacity(@opacity: 0.5)",
+
+				"ml-transition-0":"#transition > .all(@duration:0.2s, @ease:ease-out)",
+				"ml-transition-1":"#transition > .property(@property: width,@delay: 200ms, @ease:ease-out)",
+				"ml-transition-2":"#transition > .duration(@duration: 0.2s)",
+
+				"ml-content-0":"#content > .columns(@colwidth: 250px, @colcount: 0, @colgap: 50px, @columnRuleColor: #EEE, @columnRuleStyle: solid, @columnRuleWidth: 1px)",
+
+				"ml-box-0":"#box > .border-box()",
+				"ml-box-1":"#box > .content-box()",
+				"ml-box-2":"#box > .padding-box()",
+				"ml-box-3":"#box > .margin-box()",
+
+				"ml-transform-6":"#transform > .box-sizing (@type: border-box);",
+				"ml-transform-7":"#transform > .skew (@deg, @deg2);",
+				"ml-transform-8":"#transform > .translate3d (@x: 0, @y: 0, @z: 0);",
+				"ml-transform-9":"#transform > .perspective (@value: 1000);",
+				"ml-transform-10":"#transform > .transform-origin (@x:center, @y:center);",
+
 				"ml-wrap-0":"#wrap > .default(${1:relative,block});$2",
 				"ml-wrap-1":"#wrap > .void();",
 				"ml-wrap-2":"#wrap > .vrelative(${1:block});$2",
 				"ml-wrap-3":"#wrap > .vabsolute(${1:block});$2",
-			}
+				"ml-ex":"&:extend(${1:.reset});$2"
+			}   // MY OWN ADDITION STARTS FROM "ML-TRANSFORM-6" ONWARDS - http://css-tricks.com/snippets/css/useful-css3-less-mixins
 		}
 	},
 
