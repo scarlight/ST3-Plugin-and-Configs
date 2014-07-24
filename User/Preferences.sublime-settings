@@ -22,6 +22,10 @@
 		{
 			"characters": "/",
 			"selector": "string.quoted.double.html,string.quoted.single.html, source.css"
+		},
+		{
+			"characters": "@",
+			"selector": "source.less"
 		}
 	],
 	"auto_complete_with_fields": true,

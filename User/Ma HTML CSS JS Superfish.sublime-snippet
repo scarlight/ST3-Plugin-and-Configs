@@ -45,18 +45,26 @@ cs("#COMPANY-nav-wrp .sf-menu").superfish({
 {
     // color setting
     @main-color: blue;
-    @secondary-color: black;
+    @secondary-color: white;
+    @background-color1: red;
+    @background-color2: yellow;
 
     // same font size
     @menu-font-size: 14px;
     @menu-font-weight: 600;
     @menu-a-height:42px; // not using directly
-    @calculate-line-height: 42/14; // ( @menu-a-height / @menu-font-size )
+    @calculate-line-height: ( 42/14 ); // ( @menu-a-height / @menu-font-size )
+
+    &:extend(.reset);
+    width:auto; //auto wrap around the child container
+    height:auto;
+    background-color: @background-color1;
+    // add padding, margin or background as you like
 
     // grouped settings
     .COMPANY_nav()
     {
-        &:extend(.reset)
+        &:extend(.reset);
         width: auto;
         height:auto;
         line-height:0;
@@ -67,6 +75,7 @@ cs("#COMPANY-nav-wrp .sf-menu").superfish({
         display:inline-block;
         list-style-type:none;
         list-style-position:outside;
+        background-color:@background-color2;
     }
     .COMPANY_ul_li()
     {
@@ -76,11 +85,11 @@ cs("#COMPANY-nav-wrp .sf-menu").superfish({
     }
     .COMPANY_cascade_hover_on_li()
     {
-        background-color: @secondary-color;
+        background-color: @background-color2;
     }
     .COMPANY_parent_class_li_a()
     {
-        color: white;
+        color: @secondary-color;
         //prevent background-color here to have COMPANY_cascade_hover_on_li working
     }
     .COMPANY_nested_ul()
@@ -88,30 +97,30 @@ cs("#COMPANY-nav-wrp .sf-menu").superfish({
         #wrap > .vabsolute();
         width:auto;
         height:auto;
-        background-color: @main-color;
+        background-color: @background-color2;
         z-index:200;
     }
     .COMPANY_nested_ul_li()
     {
-        &:extend(.reset)
+        &:extend(.reset);
         width:100%;
         height:auto;
     }
     .COMPANY_nested_ul_li_a()
     {
-        &:extend(.reset)
+        &:extend(.reset);
         width: 100%;
         height:auto;
         font-size: @menu-font-size;
         font-weight:@menu-font-weight;
         text-align:left;
-        color: white;
+        color: @main-color;
         line-height:@calculate-line-height;
         padding:0 14px;
         #transition > .all(@duration:150ms, @ease:ease-out);
         &:hover {
-            color: white;
-            background-color: @secondary-color;
+            color: @secondary-color;
+            background-color: @background-color1;
         }
     }
     .COMPANY_for_a()
@@ -124,24 +133,18 @@ cs("#COMPANY-nav-wrp .sf-menu").superfish({
         font-weight:@menu-font-weight;
         text-align:left;
         text-decoration: none;
-        color: white;
+        color: @main-color;
         line-height:@calculate-line-height;
         padding:0 14px;
         #transition > .all(@duration:150ms, @ease:ease-out);
         &:hover {
             text-decoration: none;
-            color: white;
-            background-color: @main-color;
+            color: @secondary-color;
+            background-color: @background-color2;
         }
     }
 
     // -----------------------------------------------------
-
-    &:extend(.reset)
-    width:auto; //auto wrap around the child container
-    height:auto;
-    background-color: orange;
-    // add padding, margin or background as you like
 
     nav
     {
