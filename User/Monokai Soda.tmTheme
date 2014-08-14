@@ -2,6 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <!-- added: less highlight -->
 <!-- added: code from Monokai Extended to highlight PHP -->
+<!-- added: code from sublime-baara-dark theme for php highlighting @https://github.com/jobedom/sublime-baara-dark | PHP MODERN is installed as well -->
 <plist version="1.0">
 <dict>
     <key>name</key>
@@ -441,7 +442,7 @@
                 <string>#f8530f</string>
             </dict>
         </dict>
-        <!-- below for less syntax highlighting -->
+        <!-- below for less syntax highlighting : some colors modified -->
         <dict>
             <key>name</key>
             <string>less.mixin</string>
@@ -457,14 +458,36 @@
             <key>name</key>
             <string>less.variable</string>
             <key>scope</key>
-            <string>variable.declaration.less</string>
+            <string>variable.declaration.less, variable.interpolation.less, variable.other.less</string>
             <key>settings</key>
             <dict>
                 <key>foreground</key>
                 <string>#FEB55A</string>
             </dict>
         </dict>
-        <!-- below for php syntax highlighting -->
+        <dict>
+            <key>name</key>
+            <string>less.variable</string>
+            <key>scope</key>
+            <string>entity.other.attribute-name.pseudo-class.less</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#FA3F82</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>less.functions</string>
+            <key>scope</key>
+            <string>support.function.less, entity.other.attribute-name.class.css entity.other.less.mixin</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#FA3F82</string>
+            </dict>
+        </dict>
+        <!-- below for php syntax highlighting : some colors modified -->
         <dict>
             <key>name</key>
             <string>Variable Property</string>
@@ -517,7 +540,7 @@
             <key>settings</key>
             <dict>
                 <key>foreground</key>
-                <string>#ff37e7</string>
+                <string>#FA3F82</string>
             </dict>
         </dict>
         <dict>
@@ -539,7 +562,7 @@
             <key>settings</key>
             <dict>
                 <key>foreground</key>
-                <string>#fdaf5c</string>
+                <string>#FEB55A</string>
             </dict>
         </dict>
         <dict>
@@ -551,6 +574,223 @@
             <dict>
                 <key>foreground</key>
                 <string>#F92672</string>
+            </dict>
+        </dict>
+        <!-- below for php syntax highlighting from Baara Dark theme : some colors modified -->
+        <dict>
+            <key>name</key>
+            <string>Escape sequences</string>
+            <key>scope</key>
+            <string>constant.numeric.octal.interpolation.php, constant.numeric.hex.interpolation.php, constant.character.escape.interpolation.php</string>
+            <key>settings</key>
+            <dict>
+                <key>fontStyle</key>
+                <string></string>
+                <key>foreground</key>
+                <string>#637a31</string>
+                <!-- <string>#54682a</string> -->
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Interpolated variable</string>
+            <key>scope</key>
+            <string>variable.interpolation</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#ad80fe</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Interpolated variable punctuation</string>
+            <key>scope</key>
+            <string>variable.interpolation.punctuation</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#ad80fe</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Separator</string>
+            <key>scope</key>
+            <string>meta.separator</string>
+            <key>settings</key>
+            <dict>
+                <key>background</key>
+                <string>#34322a</string>
+                <key>fontStyle</key>
+                <string>bold</string>
+                <key>foreground</key>
+                <string>#75715E</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Special Method, Block Level</string>
+            <key>scope</key>
+            <string>keyword.other.special-method, meta.block-level</string>
+            <key>settings</key>
+            <dict>
+                <key>fontStyle</key>
+                <string></string>
+                <key>foreground</key>
+                <string>#A6E22E</string>
+            </dict>
+        </dict>
+        <!-- below for markkdown syntax highlighting from Baara Dark theme : some colors modified -->
+        <dict>
+            <key>name</key>
+            <string>Markdown Bold</string>
+            <key>scope</key>
+            <string>markup.bold.markdown</string>
+            <key>settings</key>
+            <dict>
+                <key>fontStyle</key>
+                <string>bold</string>
+                <key>foreground</key>
+                <string>#E6DB74</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Markdown Italic</string>
+            <key>scope</key>
+            <string>markup.italic.markdown</string>
+            <key>settings</key>
+            <dict>
+                <key>fontStyle</key>
+                <string>italic</string>
+                <key>foreground</key>
+                <string>#a7b086</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Markdown Link URL</string>
+            <key>scope</key>
+            <string>markup.underline.link.markdown</string>
+            <key>settings</key>
+            <dict>
+                <key>fontStyle</key>
+                <string></string>
+                <key>foreground</key>
+                <string>#66D9EF</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Markdown Inline Code</string>
+            <key>scope</key>
+            <string>markup.raw.inline.markdown</string>
+            <key>settings</key>
+            <dict>
+                <key>fontStyle</key>
+                <string></string>
+                <key>foreground</key>
+                <string>#ad80fe</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Markdown Punctuation</string>
+            <key>scope</key>
+            <string>markup.raw.yaml.front-matter, punctuation.definition.metadata.markdown, punctuation.definition.bold.markdown, punctuation.definition.italic.markdown, punctuation.definition.raw.markdown, punctuation.definition.fenced.markdown, punctuation.definition.string.begin.markdown, punctuation.definition.string.end.markdown, punctuation.definition.heading.markdown</string>
+            <key>settings</key>
+            <dict>
+                <key>fontStyle</key>
+                <string></string>
+                <key>foreground</key>
+                <string>#686868</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Markdown Punctuation</string>
+            <key>scope</key>
+            <string>variable.language.fenced.markdown</string>
+            <key>settings</key>
+            <dict>
+                <key>fontStyle</key>
+                <string></string>
+                <key>foreground</key>
+                <string>#686868</string>
+            </dict>
+        </dict>
+        <!-- below for markkdown syntax highlighting from sublime-monokai-extended theme -->
+        <!-- https://github.com/jonschlinkert/sublime-monokai-extended -->
+        <dict>
+            <key>name</key>
+            <string>Markdown: heading</string>
+            <key>scope</key>
+            <string>markdown.heading, markup.heading | markup.heading entity.name, markup.heading.markdown punctuation.definition.heading.markdown</string>
+            <key>settings</key>
+            <dict>
+                <key>fontStyle</key>
+                <string></string>
+                <key>foreground</key>
+                <string>#F92672</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Markdown: Blockquote</string>
+            <key>scope</key>
+            <string>markup.quote, punctuation.definition.blockquote.markdown</string>
+            <key>settings</key>
+            <dict>
+                <key>fontStyle</key>
+                <string>italic</string>
+                <key>foreground</key>
+                <string>#edfdaf</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Markdown: plain</string>
+            <key>scope</key>
+            <string>text.html.markdown</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#ffffff</string>
+            </dict>
+        </dict>
+        <!-- below for gitgutter syntax highlighting from Baara Dark theme : some colors modified -->
+        <dict>
+            <key>name</key>
+            <string>GitGutter deleted</string>
+            <key>scope</key>
+            <string>markup.deleted.git_gutter</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#F92672</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>GitGutter inserted</string>
+            <key>scope</key>
+            <string>markup.inserted.git_gutter</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#a5e22d</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>GitGutter changed</string>
+            <key>scope</key>
+            <string>markup.changed.git_gutter</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#409aff</string>
             </dict>
         </dict>
     </array>
