@@ -93,6 +93,8 @@
             <dict>
                 <key>fontStyle</key>
                 <string />
+                <key>foreground</key>
+                <string>#f7feed</string>
             </dict>
         </dict>
         <dict>
@@ -258,6 +260,8 @@
             <dict>
                 <key>fontStyle</key>
                 <string />
+                <key>foreground</key>
+                <string>#ffffff</string>
             </dict>
         </dict>
         <dict>
@@ -437,36 +441,125 @@
         </dict>
         
         <dict>
-          <key>name</key>
-          <string>less.mixin</string>
-          <key>scope</key>
-          <string>entity.other.less.mixin</string>
-          <key>settings</key>
-          <dict>
-            <key>foreground</key>
-            <string>#98E124</string>
-          </dict>
+            <key>name</key>
+            <string>less.mixin</string>
+            <key>scope</key>
+            <string>entity.other.less.mixin</string>
+            <key>settings</key>
+                <dict>
+                <key>foreground</key>
+                <string>#98E124</string>
+                </dict>
         </dict>
         <dict>
-          <key>name</key>
-          <string>less.variable</string>
-          <key>scope</key>
-          <string>variable.declaration.less</string>
-          <key>settings</key>
-          <dict>
-            <key>foreground</key>
-            <string>#FEB55A</string>
-          </dict>
-        </dict>
-    <dict>
             <key>name</key>
-            <string>SublimeLinter Error</string>
+            <string>less.variable</string>
             <key>scope</key>
-            <string>sublimelinter.mark.error</string>
+            <string>variable.declaration.less</string>
             <key>settings</key>
             <dict>
                 <key>foreground</key>
-                <string>#D02000</string>
+                <string>#FEB55A</string>
+            </dict>
+        </dict>
+        
+        <dict>
+            <key>name</key>
+            <string>Variable Property</string>
+            <key>scope</key>
+            <string>variable.other.property.php, variable.other.property</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#edfdaf</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Embedded Code</string>
+            <key>scope</key>
+            <string>punctuation.section.embedded.begin, punctuation.section.embedded.end</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#ad80fe</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Function Call</string>
+            <key>scope</key>
+            <string>entity.name.type.class.php, meta.function-call.php, meta.function-call.static.php, meta.function-call.object.php</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#a5e22d</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Control Structures</string>
+            <key>scope</key>
+            <string>keyword.control.php</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#64d9ee</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Support Function Construct</string>
+            <key>scope</key>
+            <string>support.function.construct.php</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#f900db</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Constant</string>
+            <key>scope</key>
+            <string>constant.other.php, meta.preprocessor</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#fd971d</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>PHP: Class</string>
+            <key>scope</key>
+            <string>storage.modifier.extends.php, storage.type.class.php, keyword.operator.class.php</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#fdaf5c</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Operator</string>
+            <key>scope</key>
+            <string>keyword.operator</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#F92672</string>
+            </dict>
+        </dict>
+    <dict>
+            <key>name</key>
+            <string>SublimeLinter Warning</string>
+            <key>scope</key>
+            <string>sublimelinter.mark.warning</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#DDB700</string>
             </dict>
         </dict><dict>
             <key>name</key>
@@ -480,13 +573,13 @@
             </dict>
         </dict><dict>
             <key>name</key>
-            <string>SublimeLinter Warning</string>
+            <string>SublimeLinter Error</string>
             <key>scope</key>
-            <string>sublimelinter.mark.warning</string>
+            <string>sublimelinter.mark.error</string>
             <key>settings</key>
             <dict>
                 <key>foreground</key>
-                <string>#DDB700</string>
+                <string>#D02000</string>
             </dict>
         </dict></array>
     <key>uuid</key>
