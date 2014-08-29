@@ -473,7 +473,7 @@
             <key>settings</key>
             <dict>
                 <key>foreground</key>
-                <string>#FA3F82</string>
+                <string>#ff359a</string>
             </dict>
         </dict>
         <dict>
@@ -484,7 +484,7 @@
             <key>settings</key>
             <dict>
                 <key>foreground</key>
-                <string>#FA3F82</string>
+                <string>#ff359a</string>
             </dict>
         </dict>
         <!-- below for php syntax highlighting : some colors modified -->
@@ -540,7 +540,7 @@
             <key>settings</key>
             <dict>
                 <key>foreground</key>
-                <string>#FA3F82</string>
+                <string>#ff359a</string>
             </dict>
         </dict>
         <dict>
