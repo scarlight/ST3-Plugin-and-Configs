@@ -723,12 +723,12 @@
         "parents": [{"class": "tree_row", "attributes": ["selected"]}],
         "layer0.texture": "Theme - Soda/Soda Dark/group-open-selected.png"
     },
-    // Sidebar folder closed
+    // Sidebar folder closed // modified to remove double icons
     {
         "class": "icon_folder",
         "layer0.texture": "Theme - Soda/Soda Dark/folder-closed.png",
-        "layer0.opacity": 1.0,
-        "content_margin": [8, 8]
+        "layer0.opacity": 0.0,   // "layer0.opacity": 1.0,
+        "content_margin": [0, 0] // "content_margin": [8, 8]
     },
     {
         "class": "icon_folder",
