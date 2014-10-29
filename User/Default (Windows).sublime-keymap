@@ -1,4 +1,5 @@
 [
+  { "keys": ["ctrl+k", "ctrl+c"], "command": "show_at_center" },
   { "keys": ["c", "m", "d"], "command": "cmd"},
   { "keys": ["ctrl+k", "ctrl+n"], "command": "toggle_setting", "args": {"setting": "gutter"} },
   { "keys": ["ctrl+k", "ctrl+i"], "command": "toggle_setting", "args": {"setting": "word_wrap"} },
