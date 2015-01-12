@@ -18,7 +18,7 @@
 	[
 		{
 			"characters": "<",
-			"selector": "text.html"
+			"selector": "text.html, text.hbs"
 		},
 		{
 			"characters": "/",
@@ -35,7 +35,9 @@
 	"caret_extra_top": 5,
 	"caret_extra_width": 0,
 	"caret_style": "phase",
+	"close_windows_when_empty": true,
 	"color_scheme": "Packages/User/Monokai Soda (SL).tmTheme",
+	"copy_with_empty_selection": false,
 	"detect_indentation": false,
 	"detect_slow_plugins": false,
 	"draw_centered": false,

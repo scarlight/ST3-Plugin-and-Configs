@@ -1,5 +1,13 @@
 {
 	"git_binary": "C:/Users/VM-ScarLight/AppData/Local/GitHub/PortableGit_015aa71ef18c047ce8509ffb2f9e4bb0e3e73f13/bin/git.exe",
+	"in_process_packages":
+	[
+	],
+	"installed_dependencies":
+	[
+		"0_package_control_loader",
+		"bz2"
+	],
 	"installed_packages":
 	[
 		"Alignment",
@@ -10,6 +18,7 @@
 		"BracketHighlighter",
 		"Clipboard Manager",
 		"CodeFormatter",
+		"ColorSchemeEditor",
 		"CSS Extended Completions",
 		"DocBlockr",
 		"EditorConfig",
@@ -25,13 +34,17 @@
 		"LiveStyle",
 		"Open URL",
 		"Origami",
+		"Package Control",
 		"PackageResourceViewer",
 		"PHP Modern",
+		"ScopeHunter",
+		"SerializedDataConverter",
 		"SideBarEnhancements",
 		"SublimeLinter",
 		"SublimeLinter-jshint",
 		"SublimeLinter-php",
 		"SublimeREPL",
+		"Tag",
 		"Text Pastry",
 		"Theme - Nil",
 		"Theme - Soda",

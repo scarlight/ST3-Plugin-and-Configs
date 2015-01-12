@@ -1,0 +1,8 @@
+<snippet>
+	<content>
+<![CDATA[
+{{${2:>} set.${1:prefix} ~}}
+]]>
+</content>
+	<tabTrigger>hbq</tabTrigger>
+</snippet>

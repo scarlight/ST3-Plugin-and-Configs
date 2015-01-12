@@ -518,7 +518,7 @@
             <key>settings</key>
             <dict>
                 <key>foreground</key>
-                <string>#a5e22d</string>
+                <string>#A6E22E</string>
             </dict>
         </dict>
         <dict>
@@ -779,7 +779,7 @@
             <key>settings</key>
             <dict>
                 <key>foreground</key>
-                <string>#a5e22d</string>
+                <string>#A6E22E</string>
             </dict>
         </dict>
         <dict>
@@ -791,6 +791,84 @@
             <dict>
                 <key>foreground</key>
                 <string>#409aff</string>
+            </dict>
+        </dict>
+        <!-- Handlebars Syntax Coloring. Not Yet.-->
+        <dict>
+            <key>name</key>
+            <string>Handlebars: Variable Class</string>
+            <key>scope</key>
+            <string>text.html.handlebars meta.tag.any.html string.quoted.double.handlebars meta.function.inline.other.handlebars variable.parameter.handlebars</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#AD80FE</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Handlebars: Variable ID</string>
+            <key>scope</key>
+            <string>text.html.handlebars meta.tag.block.any.html string.quoted.double.handlebars meta.function.inline.other.handlebars variable.parameter.handlebars</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#AD80FE</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Handlebars: Function</string>
+            <key>scope</key>
+            <string>text.html.handlebars meta.function.inline.other.handlebars variable.parameter.handlebars</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#AD80FE</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Handlebars: Function Argument</string>
+            <key>scope</key>
+            <string>text.html.handlebars meta.function.block.start.handlebars variable.parameter.handlebars</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#AD80FE</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Handlebars: YFM</string>
+            <key>scope</key>
+            <string>text.html.handlebars markup.raw.yaml.front-matter string.unquoted.yaml entity.name.tag.yaml</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#FEB55A</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Handlebars: JS Comments</string>
+            <key>scope</key>
+            <string>text.html.handlebars source.js.embedded.html keyword.operator.js</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#75715E</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Handlebars: JS Comments Curly</string>
+            <key>scope</key>
+            <string>text.html.handlebars source.js.embedded.html meta.brace.curly.js</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#75715E</string>
             </dict>
         </dict>
     </array>

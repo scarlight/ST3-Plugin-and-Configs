@@ -1,15 +1,4 @@
 {
-	// Disable completions of HTML attributes
-	// with this option disabled, you can get attribute list completions
-	// inside opening HTML tags.
-	// WARNING: with this option disabled, Tab key expander will not
-	// work inside opening HTML attributes
-	"disable_completions": false,
-
-	// With this option enabled, all Emmet's CSS snippets
-	// will be available in standard auto-complete popup
-	"show_css_completions": true,
-
 	// By default, Emmet overrides Tab key to effectively expand abbreviations.
 	// The downside of this approach is that you can’t expand regular ST2
 	// snippets (like `php`). Since it’s not currently possible to get a list
@@ -32,7 +21,6 @@
 	// shortcut.
 	// Use "all" value to disable all shortcuts at once
 	"disabled_keymap_actions": "",
-
 
 	// Custom snippets definitions, as per https://github.com/emmetio/emmet/blob/master/snippets.json
 	"snippets": {
@@ -64,7 +52,7 @@
 				"e-transform-5":"#transform > .opacity(@opacity: 0.5);",
 
 				"e-transition-0":"#transition > .all(@duration:0.2s, @ease:ease-out);",
-				"e-transition-1":"#transition > .property(@property: width,@delay: 200ms, @ease:ease-out);",
+				"e-transition-1":"#transition > .property(@property: width, @delay: 200ms, @ease:ease-out);",
 				"e-transition-2":"#transition > .duration(@duration: 0.2s);",
 
 				"e-content-0":"#content > .columns(@colwidth: 250px, @colcount: 0, @colgap: 50px, @columnRuleColor: #EEE, @columnRuleStyle: solid, @columnRuleWidth: 1px);",
@@ -82,11 +70,9 @@
 
 				"e-wrap-0":"#wrap > .default(${1:relative,block});$2",
 				"e-wrap-1":"#wrap > .void();",
-				"e-wrap-2":"#wrap > .vrelative(${1:block});$2",
-				"e-wrap-3":"#wrap > .vabsolute(${1:block});$2",
-				"e-reset":"&:extend(${1:.reset});$2",
-				"e-center":"&:extend(${1:.center});$2",
-				"e-center":"&:extend(${1:.center});$2",
+                "e-relative":"&:extend(${1:.relative});$2",
+				"e-absolute":"&:extend(${1:.absolute});$2",
+				"e-center"  :"&:extend(${1:.center});$2",
 				"e-bg-navy"   :".bg(${1:1-35},'navy');$2",
 				"e-bg-blue"   :".bg(${1:1-35},'blue');$2",
 				"e-bg-aqua"   :".bg(${1:1-35},'aqua');$2",
