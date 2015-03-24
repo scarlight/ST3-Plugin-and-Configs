@@ -1,104 +1,94 @@
 {
-	// By default, Emmet overrides Tab key to effectively expand abbreviations.
-	// The downside of this approach is that you can’t expand regular ST2
-	// snippets (like `php`). Since it’s not currently possible to get a list
-	// of ST2 snippets via API, you can provide a list of scopes where Emmet’s
-	// Tab trigger should be disabled when expanding simple abbreviation.
-	// If entered abbreviation (like `php`) wasn’t found in Emmet snippets list
-	// or "known_html_tags" preference, Tab handler will not be triggered.
-	// Leave this setting blank to disable this feature
-	"disabled_single_snippet_for_scopes": "",
+    // By default, Emmet overrides Tab key to effectively expand abbreviations.
+    // The downside of this approach is that you can’t expand regular ST2
+    // snippets (like `php`). Since it’s not currently possible to get a list
+    // of ST2 snippets via API, you can provide a list of scopes where Emmet’s
+    // Tab trigger should be disabled when expanding simple abbreviation.
+    // If entered abbreviation (like `php`) wasn’t found in Emmet snippets list
+    // or "known_html_tags" preference, Tab handler will not be triggered.
+    // Leave this setting blank to disable this feature
+    "disabled_single_snippet_for_scopes": "",
 
+    // Expand abbreviations inside PHP strings on single line
+    // (e.g. without formatting)
+    "php_single_line": true,
 
-	// Use old Tab handler to exand abbreviations.
-	// With this option enabled, editor may better handle Tab key
-	// (especially with other plugins that overrides Tab key),
-	// but will spit "slow plugin" message
-	"use_old_tab_handler": true,
+    // Custom snippets definitions, as per https://github.com/emmetio/emmet/blob/master/snippets.json
+    "snippets": {
+        "less": {
+            "abbreviations": {
+                "e-gradient-0":"#gradient > .vertical(@color: #F5F5F5, @start: #EEE, @stop: #FFF, @posStart: 0, @posEnd: 1);",
+                "e-gradient-1":"#gradient > .horizontal(@color: #F5F5F5, @start: #EEE, @stop: #FFF);",
+                "e-gradient-2":"#gradient > .bw(@color: #F5F5F5, @start: 0, @stop: 255);",
+                "e-gradient-3":"#gradient > .radial(@color: #F5F5F5, @start: #000, @stop: #FFF, @shape: circle farthest-corner, @position: center);",
+                "e-gradient-4":"#gradient > .none();",
 
-	// A comma-separated list of disabled action names.
-	// Listed action will not be triggered by default keyboard
-	// shortcut.
-	// Use "all" value to disable all shortcuts at once
-	"disabled_keymap_actions": "",
+                "e-border-0":"#border > .bordered(@top-color: #EEE, @right-color: #EEE, @bottom-color: #EEE, @left-color: #EEE);",
+                "e-border-1":"#border > .rounded(@radius: 2px);",
+                "e-border-2":"#border > .radius(@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0);",
 
-	// Custom snippets definitions, as per https://github.com/emmetio/emmet/blob/master/snippets.json
-	"snippets": {
-		"filters": "css",
-		"less": {
-			"abbreviations": {
-				"e-gradient-0":"#gradient > .vertical(@color: #F5F5F5, @start: #EEE, @stop: #FFF, @posStart: 0, @posEnd: 1);",
-				"e-gradient-1":"#gradient > .horizontal(@color: #F5F5F5, @start: #EEE, @stop: #FFF);",
-				"e-gradient-2":"#gradient > .bw(@color: #F5F5F5, @start: 0, @stop: 255);",
-				"e-gradient-3":"#gradient > .radial(@color: #F5F5F5, @start: #000, @stop: #FFF, @shape: circle farthest-corner, @position: center);",
-				"e-gradient-4":"#gradient > .none();",
+                "e-shadow-0":"#shadow > .drop(@x-axis: 0, @y-axis: 1px, @blur: 2px, @alpha: 0.1, @color: #000);",
+                "e-shadow-1":"#shadow > .inner(@horizontal:0, @vertical:1px, @blur:2px, @alpha: 0.4, @color: #000);",
+                "e-shadow-2":"#shadow > .both(@horizontalOut:0, @verticalOut:1px, @blurOut:2px, @alphaOut: 0.4, @colorOut: #000,@horizontalIn:0, @verticalIn:1px, @blurIn:2px, @alphaIn: 0.4, @colorIn: #000);",
+                "e-shadow-3":"#shadow > .box(@arguments);",
+                "e-shadow-4":"#shadow > .text(@arguments);",
+                "e-shadow-5":"#shadow > .none();",
 
-				"e-border-0":"#border > .bordered(@top-color: #EEE, @right-color: #EEE, @bottom-color: #EEE, @left-color: #EEE);",
-				"e-border-1":"#border > .rounded(@radius: 2px);",
-				"e-border-2":"#border > .radius(@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0);",
+                "e-transform-0":"#transform > .rotation(@deg:5deg);",
+                "e-transform-1":"#transform > .scaleY(@ratio:1.5);",
+                "e-transform-2":"#transform > .scaleX(@ratio:1.5);",
+                "e-transform-3":"#transform > .scale(@ratio:1.5);",
+                "e-transform-4":"#transform > .translate(@x:0, @y:0);",
+                "e-transform-5":"#transform > .opacity(@opacity: 0.5);",
 
-				"e-shadow-0":"#shadow > .drop(@x-axis: 0, @y-axis: 1px, @blur: 2px, @alpha: 0.1, @color: #000);",
-				"e-shadow-1":"#shadow > .inner(@horizontal:0, @vertical:1px, @blur:2px, @alpha: 0.4, @color: #000);",
-				"e-shadow-2":"#shadow > .both(@horizontalOut:0, @verticalOut:1px, @blurOut:2px, @alphaOut: 0.4, @colorOut: #000,@horizontalIn:0, @verticalIn:1px, @blurIn:2px, @alphaIn: 0.4, @colorIn: #000);",
-				"e-shadow-3":"#shadow > .box(@arguments);",
-				"e-shadow-4":"#shadow > .text(@arguments);",
-				"e-shadow-5":"#shadow > .none();",
+                "e-transition-0":"#transition > .all(@duration:0.2s, @ease:ease-out);",
+                "e-transition-1":"#transition > .property(@property: width, @delay: 200ms, @ease:ease-out);",
+                "e-transition-2":"#transition > .duration(@duration: 0.2s);",
 
-				"e-transform-0":"#transform > .rotation(@deg:5deg);",
-				"e-transform-1":"#transform > .scaleY(@ratio:1.5);",
-				"e-transform-2":"#transform > .scaleX(@ratio:1.5);",
-				"e-transform-3":"#transform > .scale(@ratio:1.5);",
-				"e-transform-4":"#transform > .translate(@x:0, @y:0);",
-				"e-transform-5":"#transform > .opacity(@opacity: 0.5);",
+                "e-content-0":"#content > .columns(@colwidth: 250px, @colcount: 0, @colgap: 50px, @columnRuleColor: #EEE, @columnRuleStyle: solid, @columnRuleWidth: 1px);",
 
-				"e-transition-0":"#transition > .all(@duration:0.2s, @ease:ease-out);",
-				"e-transition-1":"#transition > .property(@property: width, @delay: 200ms, @ease:ease-out);",
-				"e-transition-2":"#transition > .duration(@duration: 0.2s);",
+                "e-box-0":"#box > .border-box();",
+                "e-box-1":"#box > .content-box();",
+                "e-box-2":"#box > .padding-box();",
+                "e-box-3":"#box > .margin-box();",
 
-				"e-content-0":"#content > .columns(@colwidth: 250px, @colcount: 0, @colgap: 50px, @columnRuleColor: #EEE, @columnRuleStyle: solid, @columnRuleWidth: 1px);",
+                "e-transform-6":"#transform > .box-sizing (@type: border-box);",
+                "e-transform-7":"#transform > .skew (@deg, @deg2);",
+                "e-transform-8":"#transform > .translate3d (@x: 0, @y: 0, @z: 0);",
+                "e-transform-9":"#transform > .perspective (@value: 1000);",
+                "e-transform-10":"#transform > .transform-origin (@x:center, @y:center);",
 
-				"e-box-0":"#box > .border-box();",
-				"e-box-1":"#box > .content-box();",
-				"e-box-2":"#box > .padding-box();",
-				"e-box-3":"#box > .margin-box();",
-
-				"e-transform-6":"#transform > .box-sizing (@type: border-box);",
-				"e-transform-7":"#transform > .skew (@deg, @deg2);",
-				"e-transform-8":"#transform > .translate3d (@x: 0, @y: 0, @z: 0);",
-				"e-transform-9":"#transform > .perspective (@value: 1000);",
-				"e-transform-10":"#transform > .transform-origin (@x:center, @y:center);",
-
-				"e-wrap-0":"#wrap > .default(${1:relative,block});$2",
-				"e-wrap-1":"#wrap > .void();",
+                "e-wrap-0":"#wrap > .default(${1:relative,block});$2",
+                "e-wrap-1":"#wrap > .void();",
                 "e-relative":"&:extend(${1:.relative});$2",
-				"e-absolute":"&:extend(${1:.absolute});$2",
-				"e-center"  :"&:extend(${1:.center});$2",
-				"e-bg-navy"   :".bg(${1:1-35},'navy');$2",
-				"e-bg-blue"   :".bg(${1:1-35},'blue');$2",
-				"e-bg-aqua"   :".bg(${1:1-35},'aqua');$2",
-				"e-bg-teal"   :".bg(${1:1-35},'teal');$2",
-				"e-bg-olive"  :".bg(${1:1-35},'olive');$2",
-				"e-bg-green"  :".bg(${1:1-35},'green');$2",
-				"e-bg-lime"   :".bg(${1:1-35},'lime');$2",
-				"e-bg-yellow" :".bg(${1:1-35},'yellow');$2",
-				"e-bg-orange" :".bg(${1:1-35},'orange');$2",
-				"e-bg-red"    :".bg(${1:1-35},'red');$2",
-				"e-bg-maroon" :".bg(${1:1-35},'maroon');$2",
-				"e-bg-fuchsia":".bg(${1:1-35},'fuchsia');$2",
-				"e-bg-purple" :".bg(${1:1-35},'purple');$2",
-				"e-bg-black"  :".bg(${1:1-35},'black');$2",
-				"e-bg-gray"   :".bg(${1:1-35},'gray');$2",
-				"e-bg-silver" :".bg(${1:1-35},'silver');$2"
-			}   // MY OWN ADDITION STARTS FROM "e-transform-6" ONWARDS - http://css-tricks.com/snippets/css/useful-css3-less-mixins
-		}
-	},
+                "e-absolute":"&:extend(${1:.absolute});$2",
+                "e-center"  :"&:extend(${1:.center});$2",
+                "e-bg-navy"   :".bg(${1:1-35},'navy');$2",
+                "e-bg-blue"   :".bg(${1:1-35},'blue');$2",
+                "e-bg-aqua"   :".bg(${1:1-35},'aqua');$2",
+                "e-bg-teal"   :".bg(${1:1-35},'teal');$2",
+                "e-bg-olive"  :".bg(${1:1-35},'olive');$2",
+                "e-bg-green"  :".bg(${1:1-35},'green');$2",
+                "e-bg-lime"   :".bg(${1:1-35},'lime');$2",
+                "e-bg-yellow" :".bg(${1:1-35},'yellow');$2",
+                "e-bg-orange" :".bg(${1:1-35},'orange');$2",
+                "e-bg-red"    :".bg(${1:1-35},'red');$2",
+                "e-bg-maroon" :".bg(${1:1-35},'maroon');$2",
+                "e-bg-fuchsia":".bg(${1:1-35},'fuchsia');$2",
+                "e-bg-purple" :".bg(${1:1-35},'purple');$2",
+                "e-bg-black"  :".bg(${1:1-35},'black');$2",
+                "e-bg-gray"   :".bg(${1:1-35},'gray');$2",
+                "e-bg-silver" :".bg(${1:1-35},'silver');$2"
+            }   // MY OWN ADDITION STARTS FROM "e-transform-6" ONWARDS - http://css-tricks.com/snippets/css/useful-css3-less-mixins
+        }
+    },
 
-	// Emmet preferences
-	// List of all available preferences:
-	// http://docs.emmet.io/customization/preferences/
-	"preferences": {
-		"css.intUnit":"px",
-		"css.valueSeparator":":",
-		"css.propertyEnd":";"
-	}
+    // Emmet preferences
+    // List of all available preferences:
+    // http://docs.emmet.io/customization/preferences/
+    "preferences": {
+        "css.intUnit":"px",
+        "css.valueSeparator":":",
+        "css.propertyEnd":";"
+    }
 }
