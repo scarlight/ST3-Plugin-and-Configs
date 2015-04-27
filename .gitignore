@@ -4,6 +4,8 @@ User/Package Control.last-run/*
 /User/Package Control.last-run/*
 User/Package Control.system-ca-bundle
 /User/Package Control.system-ca-bundle
+User/Package Control.merged-ca-bundle
+/User/Package Control.merged-ca-bundle
 # dont git my token to my github
 User/Gist.sublime-settings
 /User/Gist.sublime-settings
