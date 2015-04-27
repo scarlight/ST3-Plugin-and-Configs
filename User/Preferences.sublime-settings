@@ -1,4 +1,14 @@
 {
+	"added_words":
+	[
+		"blogging",
+		"online",
+		"Wordpress",
+		"podcast",
+		"podcasts",
+		"workflow",
+		"checkbox"
+	],
 	"afn_insert_dimensions": true,
 	"afn_insert_width_first": true,
 	"afn_valid_scopes":
@@ -58,13 +68,22 @@
 		"Vintage"
 	],
 	"indent_to_bracket": true,
+	"index_exclude_patterns":
+	[
+		"C:\\xampp\\htdocs\\sites2\\clearsmile\\dev\\node_modules*",
+		"*.log"
+	],
 	"line_numbers": true,
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
 	"overlay_scroll_bars": "enabled",
+	"rulers":
+	[
+		150
+	],
 	"save_on_focus_lost": true,
 	"scroll_past_end": true,
-	"scroll_speed": 0.8,
+	"scroll_speed": 0.9,
 	"show_encoding": true,
 	"show_line_endings": true,
 	"show_tab_close_buttons": false,
