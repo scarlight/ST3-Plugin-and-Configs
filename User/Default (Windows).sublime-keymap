@@ -204,4 +204,13 @@
         { "key": "selector", "operator": "not_equal", "operand": "punctuation.definition.string.begin", "match_all": true },
     ]
   },
+
+  // others using vim navigation plugin
+  // Move the caret to the start of file.
+  { "keys": ["alt+u"], "command": "move_to", "args": {"to": "bol", "extend": false} },
+  // Move the caret to the end of file.
+  { "keys": ["alt+i"], "command": "move_to", "args": {"to": "eol", "extend": false} },
+  { "keys": ["alt+n"], "command": "scroll_lines", "args": {"amount": 1.0 } },
+  { "keys": ["alt+m"], "command": "scroll_lines", "args": {"amount": -1.0 } },
+  { "keys": ["alt+d"], "command": "right_delete" },
 ]
